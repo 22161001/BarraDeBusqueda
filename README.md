@@ -226,6 +226,8 @@ Convierte el texto a "Capitalizado", es decir, primera letra en mayúscula y el 
 ---
 # Método: normalizar(String texto)
 
+
+```java
 private String normalizar(String texto) {
     texto = Normalizer.normalize(texto, Normalizer.Form.NFD);
     return texto.replaceAll("\\p{M}", "").toLowerCase();
