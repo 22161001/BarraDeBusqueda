@@ -253,60 +253,86 @@ Elimina tildes y convierte el texto a minúsculas, útil para hacer búsquedas m
 # Instrucciones de uso 
 
 1.- Crea un nuevo JFrame de prueba.
+
 ![image](https://github.com/user-attachments/assets/86668d45-4dae-41ad-87ce-24b0a72db43b)
 
 2.- Agrega tu componente.jar a la paleta de componentes
 
 a) En la barra de herramientas busca Tools
+
 ![image](https://github.com/user-attachments/assets/f17fc9f9-dab9-42d1-bd18-00e816a37abf)
 
 b) busca donde dice Palette
+
 ![image](https://github.com/user-attachments/assets/556df796-08e5-430c-b8f0-cf2aa513cd0d)
 
 c)Selecciona Swing/AWT Components
+
 ![image](https://github.com/user-attachments/assets/13bb805c-9163-4e78-90a5-cecf5c46ee55)
 
 d) Agrega una nueva categoria
+
 ![image](https://github.com/user-attachments/assets/76e7b3f7-7b3f-481f-a81c-87c8a38f5c78)
 
 e) La categoria se llamará BarraBusqueda
+
 ![image](https://github.com/user-attachments/assets/8f6b9ff1-d80d-44d7-89f1-2c8ee2e3a60f)
 
 f) Agregamos nuestro .jar, damos en donde dice Add from JAR
+
 ![image](https://github.com/user-attachments/assets/1dedd75a-738c-4472-a272-b89b8192c622)
 
 g) Buscamos y seleccionamos nuestro .jar
+
 ![image](https://github.com/user-attachments/assets/9967e503-8a73-44ec-8281-2bd062e380b6)
 
 h) seleccionamos como se llama nuestro componente
+
 ![image](https://github.com/user-attachments/assets/1d6870e9-a2bf-4246-b0fa-5aa9ca615c79)
 
 i) Y seleccionamos en la categoria que nuestro componente debe aparecer
+
 ![image](https://github.com/user-attachments/assets/5165ac3e-a1a6-421f-85f4-900ffdff17f4)
 
 y listo, solo verificamos que aparezca nuestro componente en la paleta.
+
 ![image](https://github.com/user-attachments/assets/ce640742-70da-4bad-8a0e-8c5f73b26eec)
 
 
 3.-Arrastramos nuestro componente a nuestro JFrame
+
 ![image](https://github.com/user-attachments/assets/9832d811-e70c-41b6-86d6-c432dc93e55e)
 
 4.- Entramos a propiedades del componente
+
 ![image](https://github.com/user-attachments/assets/32298903-11a7-4202-a074-fa406370998f)
 
 5.- Buscamos donde dice archivo y le damos en los ...
+
 ![image](https://github.com/user-attachments/assets/f5772c9a-525d-45d3-a4d5-3549ab228522)
 
 6.- Seleccionamos nuestro archivo .txt o .csv
+
 ![image](https://github.com/user-attachments/assets/f8934eb6-7de4-4a06-9461-bb2a06961584)
 
 7.- Ahora si ejecutamos nuestro Jframe.
+
 8.- Escribimos en el cuadro de texto y seleccionamos cualquier sugerencia que aparezca.
+
 ![image](https://github.com/user-attachments/assets/6727b6f9-97d6-4fca-9b89-c7b0b3c952f3)
 
 9.- Podemos seleccionar usando las teclas de direccion y ENTER, o tambien haciendo doble clic sobre la sugerencia.
+
 ![image](https://github.com/user-attachments/assets/b7ae5849-fff8-4626-875d-7c12a8c18592) ![image](https://github.com/user-attachments/assets/f1a64e24-6760-44d1-a150-23c158a39528)
 
+
+-----
+# LINK DEL VIDEO
+
+
+
+----
+# CREDITOS DEL EQUIPO
 
 
 
