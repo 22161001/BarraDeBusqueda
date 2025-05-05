@@ -1,4 +1,4 @@
-# Componenteb barra de Busqueda
+# Componente barra de Busqueda
 ----
 # Barra de Busqueda
 Este componente de Java Swing crea una barra de búsqueda con autocompletado utilizando una lista desplegable tipo JList y una caja de texto JTextField. A continuación, se explica cada parte del código, incluyendo sus métodos y líneas clave.
@@ -23,13 +23,13 @@ import java.util.List;
 import java.util.Scanner;
 
 Importa las clases necesarias para construir interfaces gráficas, leer archivos, manejar eventos de teclado y texto, y normalizar texto (quitar acentos).
-
+---
 # Clase Principal
 
 public class barraBusqueda extends JPanel {
 
 Define una clase pública que hereda de JPanel, lo que permite integrar el componente en otras interfaces gráficas.
-
+---
 # Atributos Principales
 
 private JTextField campoBusqueda;
@@ -47,7 +47,7 @@ modeloLista: modelo que gestiona los datos de listaResultados.
 scroll: scroll vertical que contiene la lista.
 
 datos: arreglo que almacena los datos a buscar.
-
+---
 # Constructor: barraBusqueda()
 
 public barraBusqueda() {
@@ -55,7 +55,7 @@ public barraBusqueda() {
 
 Inicializa el panel con un BorderLayout, lo que facilita colocar elementos en el norte y centro.
 
-# Campo de Búsqueda
+## Campo de Búsqueda
 
 campoBusqueda = new JTextField(20);
 campoBusqueda.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -63,7 +63,7 @@ add(campoBusqueda, BorderLayout.NORTH);
 
 Crea un campo de texto con una fuente legible y lo coloca en la parte superior.
 
-# Lista de Resultados
+## Lista de Resultados
 
 modeloLista = new DefaultListModel<>();
 listaResultados = new JList<>(modeloLista);
@@ -72,7 +72,7 @@ listaResultados.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 Inicializa una lista con un modelo de datos editable. Se permite seleccionar solo un elemento a la vez.
 
-# Scroll para Resultados 
+## Scroll para Resultados 
 
 scroll = new JScrollPane(listaResultados);
 scroll.setPreferredSize(new Dimension(200, 100));
@@ -81,7 +81,7 @@ add(scroll, BorderLayout.CENTER);
 
 Agrega la lista a un JScrollPane para manejar el desbordamiento. Se oculta inicialmente.
 
-# Listener para Cambios de Texto
+## Listener para Cambios de Texto
 
 campoBusqueda.getDocument().addDocumentListener(new DocumentListener() {
     public void insertUpdate(DocumentEvent e) { buscar(); }
@@ -91,7 +91,7 @@ campoBusqueda.getDocument().addDocumentListener(new DocumentListener() {
 
 Escucha los cambios en el texto del campo. Cada vez que se edita, se llama al método buscar().
 
-# Navegación con Teclado
+## Navegación con Teclado
 
 campoBusqueda.addKeyListener(new KeyAdapter() {
     public void keyPressed(KeyEvent e) {
@@ -116,7 +116,7 @@ Enter: selecciona el elemento
     }
 });
 
-# Selección con Mouse o Tecla Enter
+## Selección con Mouse o Tecla Enter
 
 listaResultados.addMouseListener(new MouseAdapter() {
     public void mouseClicked(MouseEvent e) {
@@ -135,7 +135,7 @@ listaResultados.addKeyListener(new KeyAdapter() {
 });
 
 Permiten seleccionar una opción ya sea con doble clic o pulsando Enter desde la lista.
-
+---
 # Método: setArchivo(File archivo)
 
 public void setArchivo(File archivo) {
@@ -154,7 +154,7 @@ public void setArchivo(File archivo) {
 }
 
 Lee un archivo línea por línea, capitaliza cada palabra y guarda las líneas en el arreglo datos.
-
+---
 # Método: buscar()
 
 private void buscar() {
@@ -192,7 +192,7 @@ Busca coincidencias que comiencen con el texto ingresado.
 }
 
 Muestra los resultados (o un mensaje si no hay) y actualiza el panel.
-
+---
 # Método: seleccionarElemento()
 
 private void seleccionarElemento() {
@@ -207,7 +207,7 @@ private void seleccionarElemento() {
 }
 
 Inserta el valor seleccionado en el campo de texto, limpia la lista y devuelve el foco al campo.
-
+---
 # Método: capitalizar(String texto)
 
 private String capitalizar(String texto) {
@@ -223,7 +223,7 @@ private String capitalizar(String texto) {
 }
 
 Convierte el texto a "Capitalizado", es decir, primera letra en mayúscula y el resto en minúscula.
-
+---
 # Método: normalizar(String texto)
 
 private String normalizar(String texto) {
