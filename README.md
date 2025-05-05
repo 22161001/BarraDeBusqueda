@@ -1,13 +1,13 @@
-## Componenteb barra de Busqueda
+# Componenteb barra de Busqueda
 ----
 # Barra de Busqueda
 Este componente de Java Swing crea una barra de búsqueda con autocompletado utilizando una lista desplegable tipo JList y una caja de texto JTextField. A continuación, se explica cada parte del código, incluyendo sus métodos y líneas clave.
 -----
 # Estructura del Código
 ----
-Paquete e Importaciones
+# Paquete e Importaciones
 
-# package barrabusqueda;
+package barrabusqueda;
 
 Define el paquete al que pertenece la clase.
 
@@ -81,7 +81,7 @@ add(scroll, BorderLayout.CENTER);
 
 Agrega la lista a un JScrollPane para manejar el desbordamiento. Se oculta inicialmente.
 
-Listener para Cambios de Texto
+# Listener para Cambios de Texto
 
 campoBusqueda.getDocument().addDocumentListener(new DocumentListener() {
     public void insertUpdate(DocumentEvent e) { buscar(); }
@@ -91,7 +91,7 @@ campoBusqueda.getDocument().addDocumentListener(new DocumentListener() {
 
 Escucha los cambios en el texto del campo. Cada vez que se edita, se llama al método buscar().
 
-Navegación con Teclado
+# Navegación con Teclado
 
 campoBusqueda.addKeyListener(new KeyAdapter() {
     public void keyPressed(KeyEvent e) {
@@ -116,7 +116,7 @@ Enter: selecciona el elemento
     }
 });
 
-Selección con Mouse o Tecla Enter
+# Selección con Mouse o Tecla Enter
 
 listaResultados.addMouseListener(new MouseAdapter() {
     public void mouseClicked(MouseEvent e) {
@@ -136,7 +136,7 @@ listaResultados.addKeyListener(new KeyAdapter() {
 
 Permiten seleccionar una opción ya sea con doble clic o pulsando Enter desde la lista.
 
-Método: setArchivo(File archivo)
+# Método: setArchivo(File archivo)
 
 public void setArchivo(File archivo) {
     try (Scanner scanner = new Scanner(archivo)) {
@@ -155,7 +155,7 @@ public void setArchivo(File archivo) {
 
 Lee un archivo línea por línea, capitaliza cada palabra y guarda las líneas en el arreglo datos.
 
-Método: buscar()
+# Método: buscar()
 
 private void buscar() {
     String texto = normalizar(campoBusqueda.getText().trim());
@@ -193,7 +193,7 @@ Busca coincidencias que comiencen con el texto ingresado.
 
 Muestra los resultados (o un mensaje si no hay) y actualiza el panel.
 
-Método: seleccionarElemento()
+# Método: seleccionarElemento()
 
 private void seleccionarElemento() {
     String seleccion = listaResultados.getSelectedValue();
@@ -208,7 +208,7 @@ private void seleccionarElemento() {
 
 Inserta el valor seleccionado en el campo de texto, limpia la lista y devuelve el foco al campo.
 
-Método: capitalizar(String texto)
+# Método: capitalizar(String texto)
 
 private String capitalizar(String texto) {
     String[] partes = texto.toLowerCase().split("\\s+");
@@ -224,7 +224,7 @@ private String capitalizar(String texto) {
 
 Convierte el texto a "Capitalizado", es decir, primera letra en mayúscula y el resto en minúscula.
 
-Método: normalizar(String texto)
+# Método: normalizar(String texto)
 
 private String normalizar(String texto) {
     texto = Normalizer.normalize(texto, Normalizer.Form.NFD);
