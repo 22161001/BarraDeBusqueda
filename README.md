@@ -1,7 +1,9 @@
 # Componente barra de Busqueda
 ----
+
 # Barra de Busqueda
 Este componente de Java Swing crea una barra de búsqueda con autocompletado utilizando una lista desplegable tipo JList y una caja de texto JTextField. A continuación, se explica cada parte del código, incluyendo sus métodos y líneas clave.
+
 -----
 # Estructura del Código
 ----
@@ -25,6 +27,7 @@ import java.util.Scanner;
 ```
 
 Importa las clases necesarias para construir interfaces gráficas, leer archivos, manejar eventos de teclado y texto, y normalizar texto (quitar acentos).
+
 ---
 # Clase Principal
 
@@ -33,6 +36,7 @@ public class barraBusqueda extends JPanel {
 ```
 
 Define una clase pública que hereda de JPanel, lo que permite integrar el componente en otras interfaces gráficas.
+
 ---
 # Atributos Principales
 ```java
@@ -51,6 +55,7 @@ modeloLista: modelo que gestiona los datos de listaResultados.
 scroll: scroll vertical que contiene la lista.
 
 datos: arreglo que almacena los datos a buscar.
+
 ---
 # Constructor: barraBusqueda()
 ```java
@@ -139,6 +144,7 @@ listaResultados.addKeyListener(new KeyAdapter() {
 });
 ```
 Permiten seleccionar una opción ya sea con doble clic o pulsando Enter desde la lista.
+
 ---
 # Método: setArchivo(File archivo)
 ```java
@@ -158,6 +164,7 @@ public void setArchivo(File archivo) {
 }
 ```
 Lee un archivo línea por línea, capitaliza cada palabra y guarda las líneas en el arreglo datos.
+
 ---
 # Método: buscar()
 ```java
@@ -196,6 +203,7 @@ Busca coincidencias que comiencen con el texto ingresado.
 }
 ```
 Muestra los resultados (o un mensaje si no hay) y actualiza el panel.
+
 ---
 # Método: seleccionarElemento()
 ```java
@@ -211,6 +219,7 @@ private void seleccionarElemento() {
 }
 ```
 Inserta el valor seleccionado en el campo de texto, limpia la lista y devuelve el foco al campo.
+
 ---
 # Método: capitalizar(String texto)
 ```java
@@ -227,6 +236,7 @@ private String capitalizar(String texto) {
 }
 ```
 Convierte el texto a "Capitalizado", es decir, primera letra en mayúscula y el resto en minúscula.
+
 ---
 # Método: normalizar(String texto)
 
@@ -236,5 +246,5 @@ private String normalizar(String texto) {
     texto = Normalizer.normalize(texto, Normalizer.Form.NFD);
     return texto.replaceAll("\\p{M}", "").toLowerCase();
 }
-
+```
 Elimina tildes y convierte el texto a minúsculas, útil para hacer búsquedas más robustas.
