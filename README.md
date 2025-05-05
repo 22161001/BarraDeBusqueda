@@ -1,12 +1,13 @@
-## barraBusqueda - Explicación Detallada del Código
-
+## Componenteb barra de Busqueda
+----
+# Barra de Busqueda
 Este componente de Java Swing crea una barra de búsqueda con autocompletado utilizando una lista desplegable tipo JList y una caja de texto JTextField. A continuación, se explica cada parte del código, incluyendo sus métodos y líneas clave.
----
+-----
 # Estructura del Código
-
+----
 Paquete e Importaciones
 
-package barrabusqueda;
+# package barrabusqueda;
 
 Define el paquete al que pertenece la clase.
 
@@ -23,13 +24,13 @@ import java.util.Scanner;
 
 Importa las clases necesarias para construir interfaces gráficas, leer archivos, manejar eventos de teclado y texto, y normalizar texto (quitar acentos).
 
-Clase Principal
+# Clase Principal
 
 public class barraBusqueda extends JPanel {
 
 Define una clase pública que hereda de JPanel, lo que permite integrar el componente en otras interfaces gráficas.
 
-Atributos Principales
+# Atributos Principales
 
 private JTextField campoBusqueda;
 private JList<String> listaResultados;
@@ -47,14 +48,14 @@ scroll: scroll vertical que contiene la lista.
 
 datos: arreglo que almacena los datos a buscar.
 
-Constructor: barraBusqueda()
+# Constructor: barraBusqueda()
 
 public barraBusqueda() {
     setLayout(new BorderLayout());
 
 Inicializa el panel con un BorderLayout, lo que facilita colocar elementos en el norte y centro.
 
-Campo de Búsqueda
+# Campo de Búsqueda
 
 campoBusqueda = new JTextField(20);
 campoBusqueda.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -62,7 +63,7 @@ add(campoBusqueda, BorderLayout.NORTH);
 
 Crea un campo de texto con una fuente legible y lo coloca en la parte superior.
 
-Lista de Resultados
+# Lista de Resultados
 
 modeloLista = new DefaultListModel<>();
 listaResultados = new JList<>(modeloLista);
@@ -71,7 +72,7 @@ listaResultados.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 Inicializa una lista con un modelo de datos editable. Se permite seleccionar solo un elemento a la vez.
 
-Scroll para Resultados
+# Scroll para Resultados 
 
 scroll = new JScrollPane(listaResultados);
 scroll.setPreferredSize(new Dimension(200, 100));
