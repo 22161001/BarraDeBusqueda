@@ -326,17 +326,18 @@ y listo, solo verificamos que aparezca nuestro componente en la paleta.
 ![image](https://github.com/user-attachments/assets/b7ae5849-fff8-4626-875d-7c12a8c18592) ![image](https://github.com/user-attachments/assets/f1a64e24-6760-44d1-a150-23c158a39528)
 
 
------
-# LINK DEL VIDEO
-
-
-
 ----
 # CREDITOS DEL EQUIPO
 
+Núñez Reyes Jorge Emilio
+
+Antonio Contreras Alan
+
+Cruz Gallegos Julio Gabriel
 
 
-
+-----
+# LINK DEL VIDEO
 
 
 
