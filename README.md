@@ -1,6 +1,6 @@
 # Componente barra de Busqueda
 ----
-
+.....
 # Barra de Busqueda
 barraBusqueda es un componente personalizado en Java Swing que implementa una barra de búsqueda con sugerencias automáticas tipo autocompletado. Muestra los resultados en una lista desplegable a medida que el usuario escribe, permitiendo seleccionar una opción con teclado o ratón. Es útil para facilitar búsquedas rápidas dentro de un conjunto de datos como nombres, palabras clave, etc.
 
